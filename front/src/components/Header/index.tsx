@@ -74,7 +74,6 @@ export default function Header(){
             <div css={inputbox}>
                 <input data-testid="input-task" placeholder="O que precisa ser feito?" css={inputapp} onKeyDown={handleKeyDown}/>
                 <div css={tooglebox}>
-                    <input data-testid="arrow-input" type="checkbox" css={toogle(tasks.every((task:Task)=>task.isDone))} checked={tasks.every((task:Task)=>task.isDone)} onChange={toggleAll} />
                     <label></label>
                 </div>
             </div>

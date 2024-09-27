@@ -4,6 +4,7 @@ import { Task } from "../../types";
 import { TaskContext } from "../../TaskContext";
 import { useLocation } from "react-router-dom";
 import { listTasks, listTasksItem } from "./styles";
+import { API_URL } from "../../config";
 
 type Props = {
     task: Task
@@ -29,16 +30,44 @@ function Item({ task }: Props) {
     const [title, setTitle] = useState<string>(task.title || "");
 
     const changeTaskStatus = useCallback((checked: boolean) => {
-        setTasks(tasks.map(item => item.id === task.id ? { ...task, isDone: checked } : item));
-        setIsDone(checked)
+        fetch(API_URL + "/tasks/"+task.id, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ...task, isDone: checked })
+          })
+            .then(response => response.json())
+            .then(data=>{
+                setTasks(tasks.map(item => item.id === task.id ? data : item));
+                setIsDone(checked)
+            })
     }, [tasks, setTasks, setIsDone,task]);
 
     const updateItem = useCallback((title: string) => {
-        setTasks(tasks.map(item => item.id === task.id ? { ...task, title } : item));
+        fetch(API_URL + "/tasks/"+task.id, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ...task, title })
+          })
+            .then(response => response.json())
+            .then(data=>{
+                setTasks(tasks.map(item => item.id === task.id ? data : item));
+            })
     }, [tasks, setTasks, task]);
 
     const removeItem = useCallback(() => {
-        setTasks(tasks.filter(item => item.id !== task.id));
+        fetch(API_URL + "/tasks/"+task.id, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json"
+            },
+          })
+            .then(()=>{
+                setTasks(tasks.filter(item => item.id !== task.id));
+            })
     }, [tasks, setTasks, task]);
 
 
