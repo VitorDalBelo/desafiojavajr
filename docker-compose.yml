@@ -1,0 +1,56 @@
+version: '3.9'
+
+networks:
+  todo-network:
+    name: todo-network
+    driver: bridge
+
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_todo6_java
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1010
+      POSTGRES_DB: todo
+    ports:
+      - "5401:5432"
+    volumes:
+      - postgres_todo6_java:/var/lib/postgresql/data
+    networks:
+      - todo-network
+
+  api:
+    build: 
+      context: ./crudjava 
+      dockerfile: Dockerfile
+    container_name: api_todo_java
+    restart: always
+    environment:
+      SPRING.DATASOURCE.URL: jdbc:postgresql://db:5432/todo
+      SPRING.DATASOURCE.USERNAME: user
+      SPRING.DATASOURCE.PASSWORD: 1010
+    command: mvn spring-boot:run
+    ports:
+      - "8189:8080"
+    depends_on:
+      - db
+    networks:
+      - todo-network
+  app:
+    build: 
+      context: ./front 
+      dockerfile: Dockerfile
+    environment:
+      - REACT_APP_BACKEND_URL= http://192.168.1.116:8189
+    ports:
+      - "3030:3000"
+    depends_on:
+      - db
+      - api
+    networks:
+      - todo-network
+
+volumes:
+  postgres_todo6_java:

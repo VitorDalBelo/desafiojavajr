@@ -1,0 +1,17 @@
+com/vitor/crudjava/modules/task/repositories/TaskRepository.class
+com/vitor/crudjava/exceptions/httpExceptions/InternalServerErrorRequestException.class
+com/vitor/crudjava/config/WebConfig.class
+com/vitor/crudjava/modules/task/dto/CreateTaskDTO.class
+com/vitor/crudjava/modules/task/dto/UpdateTaskDTO.class
+com/vitor/crudjava/modules/task/dto/GetTaskDTO.class
+com/vitor/crudjava/exceptions/ExceptionResponse.class
+com/vitor/crudjava/config/SwaggerConfig.class
+com/vitor/crudjava/exceptions/handler/GlobalExceptionHandler.class
+com/vitor/crudjava/modules/task/dto/PaginatedTasksDTO.class
+com/vitor/crudjava/modules/task/models/TaskEntity.class
+com/vitor/crudjava/exceptions/httpExceptions/ConflictException.class
+com/vitor/crudjava/CrudjavaApplication.class
+com/vitor/crudjava/exceptions/httpExceptions/NotFoundException.class
+com/vitor/crudjava/modules/task/TasksService.class
+com/vitor/crudjava/modules/task/TasksController.class
+com/vitor/crudjava/exceptions/httpExceptions/BadRequestException.class

@@ -1,0 +1,17 @@
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/CrudjavaApplication.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/config/SwaggerConfig.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/config/WebConfig.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/ExceptionResponse.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/handler/GlobalExceptionHandler.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/httpExceptions/BadRequestException.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/httpExceptions/ConflictException.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/httpExceptions/InternalServerErrorRequestException.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/exceptions/httpExceptions/NotFoundException.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/TasksController.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/TasksService.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/dto/CreateTaskDTO.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/dto/GetTaskDTO.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/dto/PaginatedTasksDTO.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/dto/UpdateTaskDTO.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/models/TaskEntity.java
+/home/vitor/devFolder/ToDoListJavaJr/crudjava/src/main/java/com/vitor/crudjava/modules/task/repositories/TaskRepository.java
